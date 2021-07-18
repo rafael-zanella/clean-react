@@ -5,8 +5,7 @@
   "main": "index.js",
   "lint-staged": {
     "*.{ts,tsx}": [
-      "eslint 'src/**' --fix",
-      "npm test --watchAll=false --findRelatedTests --bail"
+      "eslint 'src/**'"
     ]
   },
   "scripts": {
