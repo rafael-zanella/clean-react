@@ -3,13 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "husky": {
-    "hooks": {
-      "pre-commit": "echo 'teste'"
-    }
-  },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "prepare": "husky install"
   },
   "author": "",
   "license": "ISC",
@@ -24,7 +20,7 @@
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-standard": "^5.0.0",
     "git-commit-msg-linter": "^3.2.6",
-    "husky": "^7.0.1",
+    "husky": "^7.0.0",
     "jest": "^27.0.6",
     "lint-staged": "^11.0.1",
     "ts-jest": "^27.0.3",
