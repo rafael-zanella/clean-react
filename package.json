@@ -5,11 +5,15 @@
   "main": "index.js",
   "lint-staged": {
     "*.{ts,tsx}": [
-      "eslint 'src/**'"
+      "eslint 'src/**'",
+      "npm run test:staged"
     ]
   },
   "scripts": {
-    "test": "jest",
+    "test": "jest --passWithNoTests",
+    "test:watch": "npm test -- --watch",
+    "test:staged": "npm test -- --findRelatedTests",
+    "test:ci": "npm test -- --coverage",
     "prepare": "husky install",
     "pre-commit": "lint-staged"
   },
