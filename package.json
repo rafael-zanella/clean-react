@@ -3,9 +3,16 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint 'src/**' --fix",
+      "npm test --watchAll=false --findRelatedTests --bail"
+    ]
+  },
   "scripts": {
     "test": "jest",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "pre-commit": "lint-staged"
   },
   "author": "",
   "license": "ISC",
@@ -23,6 +30,7 @@
     "husky": "^7.0.0",
     "jest": "^27.0.6",
     "lint-staged": "^11.0.1",
+    "prettier": "^2.3.2",
     "ts-jest": "^27.0.3",
     "typescript": "^4.3.5"
   }
